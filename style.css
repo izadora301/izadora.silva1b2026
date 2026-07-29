@@ -1,29 +1,37 @@
-/* Resets e Fontes Globais */
+/* Reset e Fontes Preto e Branco */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
+    background-color: #fcfcfc;
+    color: #111111;
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.7;
+}
+
+/* Títulos com fonte sofisticada */
+h1, h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* 1. Barra Superior (Topbar) */
+/* 1. Barra Superior Minimalista */
 .topbar {
-    background-color: #1a1a1a;
+    background-color: #000000;
     color: #ffffff;
-    padding: 10px 0;
-    font-size: 0.9rem;
+    padding: 12px 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
 }
 
 .topbar-content {
@@ -35,45 +43,49 @@ body {
 }
 
 .btn-topbar {
-    background-color: #d90429;
-    color: #ffffff;
-    padding: 8px 16px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 6px 18px;
     text-decoration: none;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.85rem;
-    transition: background 0.3s ease, transform 0.2s ease;
+    border: 1px solid #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
 .btn-topbar:hover {
-    background-color: #ef233c;
-    transform: translateY(-2px);
+    background-color: #000000;
+    color: #ffffff;
 }
 
 /* 2. Cabeçalho Principal */
 header {
-    background: linear-gradient(135deg, #2b2d42, #1d3557);
-    color: #ffffff;
-    padding: 40px 0;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 50px 0 30px 0;
     text-align: center;
+    border-bottom: 1px solid #eaeaea;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1rem;
+    color: #666666;
     font-style: italic;
 }
 
 /* 3. Navegação */
 nav {
     background-color: #ffffff;
-    border-bottom: 2px solid #e5e5e5;
+    border-bottom: 1px solid #111111;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -82,75 +94,84 @@ nav {
 .navbar {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 15px 0;
+    gap: 30px;
+    padding: 18px 0;
     flex-wrap: wrap;
 }
 
 .navbar a {
-    color: #2b2d42;
+    color: #111111;
     text-decoration: none;
+    font-size: 0.85rem;
     font-weight: 600;
-    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: opacity 0.2s ease;
 }
 
 .navbar a:hover {
-    color: #d90429;
+    opacity: 0.5;
 }
 
-/* 4. Banner de Imagem (images/teste.png) */
+/* 4. Imagem em Destaque (teste.jpeg) */
 .banner-imagem {
-    margin: 30px 0;
+    margin: 40px 0;
     text-align: center;
 }
 
 .banner-imagem img {
     width: 100%;
-    max-height: 400px;
+    max-height: 450px;
     object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #111111;
+    /* Deixa a própria imagem em tom de cinza se quiser (opcional) */
+    /* filter: grayscale(100%); */ 
 }
 
 /* 5. Cartões de Conteúdo */
 main {
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
 .card {
     background: #ffffff;
-    padding: 25px 30px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    border-left: 5px solid #d90429;
-    transition: transform 0.2s ease;
+    padding: 35px;
+    margin-bottom: 30px;
+    border: 1px solid #e5e5e5;
+    transition: border-color 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-3px);
+    border-color: #111111;
 }
 
 .card h2 {
-    color: #2b2d42;
-    font-size: 1.4rem;
-    margin-bottom: 8px;
+    color: #000000;
+    font-size: 1.6rem;
+    margin-bottom: 6px;
 }
 
 .card .meta {
-    font-size: 0.85rem;
-    color: #8d99ae;
-    margin-bottom: 15px;
-    font-weight: 500;
+    font-size: 0.8rem;
+    color: #888888;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card p {
+    color: #333333;
+    font-size: 0.95rem;
 }
 
 /* 6. Rodapé */
 footer {
-    background-color: #1a1a1a;
-    color: #8d99ae;
+    background-color: #000000;
+    color: #888888;
     text-align: center;
-    padding: 25px 0;
-    font-size: 0.9rem;
+    padding: 35px 0;
+    font-size: 0.85rem;
+    border-top: 1px solid #111111;
 }
 
 footer strong {
@@ -158,6 +179,7 @@ footer strong {
 }
 
 .creditos {
-    margin-top: 8px;
-    color: #edf2f4;
+    margin-top: 10px;
+    color: #cccccc;
+    letter-spacing: 0.5px;
 }
